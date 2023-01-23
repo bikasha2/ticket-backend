@@ -10,5 +10,7 @@ router.get("/tickets", auth, controller.findAll);
 router.get("/ticket/:id", auth, controller.findOne);
 router.post("/tickets", controller.save);
 router.delete("/ticket/:id", auth, controller.delete);
+router.put('/ticket/completed/:id', controller.findOneUpdateComplete)
+router.put('/ticket/uncompleted/:id', controller.findOneUpdateunComplete)
 
 module.exports = router;

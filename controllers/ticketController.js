@@ -27,6 +27,22 @@ module.exports = {
             throw err;
         }
     },
+    findOneUpdateComplete: async function (req, res) {
+        try {
+            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {ticket: false})
+            res.json(tickets)
+        } catch (err) {
+            throw err;
+        }
+    },
+    findOneUpdateunComplete: async function (req, res) {
+        try {
+            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {ticket: true})
+            res.json(tickets)
+        } catch (err) {
+            throw err;
+        }
+    },
     save: async function (req, res) {
         try {
             const { email, description } = req.body;
@@ -50,7 +66,8 @@ module.exports = {
                 email,
                 description,
                 date,
-                time
+                time,
+                ticket: true
             });
 
             const data  = await newTicket.save()

@@ -17,6 +17,9 @@ const UserTicketSchema = new Schema({
     time: {
         type: String,
     },
+    ticket: {
+        type: Boolean
+    }
 },
 {
     versionKey: false 
