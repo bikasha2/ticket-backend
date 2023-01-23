@@ -18,7 +18,8 @@ Step2: npm start
 
 - Furhter anyone can create the ticket by just providing the email and description of the ticket and finally clicking on the submit button to generate a new ticket.
 
-<img width="1440" alt="Screenshot 2023-01-23 at 9 31 34 AM" src="https://user-images.githubusercontent.com/121108969/213964052-39c5539b-3d52-46f5-8d98-6efe0a0cb6e6.png">
+
+<img width="1440" alt="Screenshot 2023-01-23 at 4 52 35 PM" src="https://user-images.githubusercontent.com/121108969/214028014-9d72e7ee-41f0-4896-9216-ed34c081184d.png">
 
 
 <img width="1440" alt="Screenshot 2023-01-23 at 9 31 48 AM" src="https://user-images.githubusercontent.com/121108969/213964060-459ab42e-efd0-4b30-9b7d-b57465e566ec.png">
