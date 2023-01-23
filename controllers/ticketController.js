@@ -45,7 +45,7 @@ module.exports = {
     },
     save: async function (req, res) {
         try {
-            const { email, description } = req.body;
+            const { email, description, product } = req.body;
             if (!email) return res.status(400).json({ msg: "Please select the user" })
             if (!description) {
                 return res.status(400).json({ msg: "Please Description fields" })
@@ -65,6 +65,7 @@ module.exports = {
             const newTicket = new UserTicket({
                 email,
                 description,
+                product,
                 date,
                 time,
                 ticket: true

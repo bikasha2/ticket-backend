@@ -11,6 +11,10 @@ const UserTicketSchema = new Schema({
         type: String,
         required: true
     },
+    product: {
+        type: String,
+        required: true
+    },
     date: {
         type: String,
     },
