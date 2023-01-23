@@ -1,5 +1,7 @@
 # Ticket-Managements
 
+The backend hosted link is https://ticket-backend-eqk1.onrender.com
+
 1. Backend - To run the project follow the below steps :
 
 Step1: npm install - To install the dependencies.
