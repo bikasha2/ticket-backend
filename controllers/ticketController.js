@@ -29,7 +29,7 @@ module.exports = {
     },
     findOneUpdateComplete: async function (req, res) {
         try {
-            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {ticket: false})
+            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {ticket: true}, {new: true})
             res.json(tickets)
         } catch (err) {
             throw err;
@@ -37,7 +37,7 @@ module.exports = {
     },
     findOneUpdateunComplete: async function (req, res) {
         try {
-            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {ticket: true})
+            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {ticket: false}, {new: true})
             res.json(tickets)
         } catch (err) {
             throw err;
