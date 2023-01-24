@@ -45,7 +45,7 @@ module.exports = {
     },
     findOneUpdateAssigne: async function (req, res) {
         try {
-            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {assigne: req.body.assigne})
+            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {assigne: req.body.assigne}, {new: true})
             res.json(tickets)
         } catch (err) {
             throw err;
