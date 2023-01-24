@@ -9,6 +9,8 @@ const routes = require("./routes");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(cors())
+
 
 
 //mongo database
