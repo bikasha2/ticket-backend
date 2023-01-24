@@ -17,7 +17,7 @@ const UserTicketSchema = new Schema({
     },
     assigne: {
         type: String,
-        default: '',
+        default: 'IT Staff',
     },
     date: {
         type: String,
