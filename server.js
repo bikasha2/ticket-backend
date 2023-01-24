@@ -16,7 +16,6 @@ app.use(cors())
 
 //mongo database
 const db = config.MONGO_URI;
-console.log(db)
 // connet to mongo
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);

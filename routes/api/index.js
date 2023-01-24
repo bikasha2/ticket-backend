@@ -13,5 +13,6 @@ router.delete("/ticket/:id", auth, controller.delete);
 router.put('/ticket/completed/:id', controller.findOneUpdateComplete)
 router.put('/ticket/uncompleted/:id', controller.findOneUpdateunComplete)
 router.put('/ticket/assigne/:id', controller.findOneUpdateAssigne)
+router.put('/ticket/comment/:id', controller.updateComment)
 
 module.exports = router;

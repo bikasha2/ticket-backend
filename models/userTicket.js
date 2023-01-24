@@ -15,6 +15,10 @@ const UserTicketSchema = new Schema({
         type: String,
         required: true
     },
+    comments: [{
+        type: String,
+        default: ""
+    }],
     assigne: {
         type: String,
         default: 'IT Staff',

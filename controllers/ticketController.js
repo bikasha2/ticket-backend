@@ -1,8 +1,6 @@
 const UserTicket = require("../models/userTicket");
 const User = require("../models/user");
 const mongoose = require("mongoose");
-const Grid = require("gridfs-stream");
-let gfs;
 
 let db = mongoose.connection;
 db.options = {};
@@ -47,6 +45,17 @@ module.exports = {
         try {
             const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {assigne: req.body.assigne}, {new: true})
             res.json(tickets)
+        } catch (err) {
+            throw err;
+        }
+    },
+    updateComment: async function (req, res) {
+        try {
+            const ticket = await UserTicket.findByIdAndUpdate(req.params.id,
+                { "$push": { "comments": req.body.comments } },
+                { "new": true, "upsert": true }
+            )
+            res.json(ticket)
         } catch (err) {
             throw err;
         }
