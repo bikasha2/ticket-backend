@@ -43,6 +43,14 @@ module.exports = {
             throw err;
         }
     },
+    findOneUpdateAssigne: async function (req, res) {
+        try {
+            const tickets = await UserTicket.findByIdAndUpdate(req.params.id, {assigne: req.body.assigne})
+            res.json(tickets)
+        } catch (err) {
+            throw err;
+        }
+    },
     save: async function (req, res) {
         try {
             const { email, description, product } = req.body;
