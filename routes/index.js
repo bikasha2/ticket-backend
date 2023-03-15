@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const apiRoutes = require("./api");
 const userRoutes = require("./users");
-// const path = require("path");
 
 // Check health
 router.get('/health', (req, res) => {

@@ -28,13 +28,6 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    // tickets: [
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: "userticket"
-    //     }
-    // ]
-
 },
 {
     versionKey: false 
